@@ -72,6 +72,7 @@ ListCart();
 function deleteItem(item) {
   const index = cart.findIndex((x) => x.name === item.name);
   cart.splice(index, 1);
+  Sum();
   localStorage.setItem("cart", JSON.stringify(cart));
   ListCart();
 }
